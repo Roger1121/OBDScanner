@@ -6,7 +6,7 @@ namespace LogicLayer
     {
         //programm will work with one OBD2 interface at once
         private SerialPort port;
-        public void InitSerial(string name = "COM1", int baud = 38400,
+        public void InitSerial(string name = "COM8", int baud = 38400,
                                Parity parity = Parity.None, int dataBits = 8,
                                StopBits stopBits = StopBits.One)
         {
