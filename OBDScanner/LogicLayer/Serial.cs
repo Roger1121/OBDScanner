@@ -2,28 +2,36 @@
 
 namespace LogicLayer
 {
-    class Serial
+    public class Serial
     {
         //programm will work with one OBD2 interface at once
-        SerialPort port;
-        public void initSerial(string name = "OBD", int baud = 38400,
+        private SerialPort port;
+        public void InitSerial(string name = "COM1", int baud = 38400,
                                Parity parity = Parity.None, int dataBits = 8,
                                StopBits stopBits = StopBits.One)
         {
             port = new SerialPort(name, baud, parity, dataBits, stopBits);
+            port.ReadTimeout = 1000;
+            port.WriteTimeout = 1000;
+            port.Open();
         }
-        public string parseSerialResponse(string response)
+        public string ParseSerialResponse(string response)
         {
-            return response;
+            return null;
         }
-        public string readSerial()
+        public string ReadSerial()
         {
-            string response=null;
-            return parseSerialResponse(response);
+            string response = port.ReadLine();
+            return ParseSerialResponse(response);
         }
-        public void writeSerial(string command)
+        public void WriteSerial(string command)
         {
+            port.Write(command + '\r');
+        }
 
+        public void CloseSerial()
+        {
+            port.Close();
         }
     }
 }
