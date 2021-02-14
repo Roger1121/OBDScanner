@@ -17,7 +17,7 @@ namespace LogicLayer
         }
         public string ParseSerialResponse(string response)
         {
-            return null;
+            return response;
         }
         public string ReadSerial()
         {
