@@ -1,0 +1,5 @@
+C:\Users\leszc\OBDScanner\OBDScanner\LogicLayer\bin\Debug\netstandard2.0\LogicLayer.deps.json
+C:\Users\leszc\OBDScanner\OBDScanner\LogicLayer\bin\Debug\netstandard2.0\LogicLayer.dll
+C:\Users\leszc\OBDScanner\OBDScanner\LogicLayer\obj\Debug\netstandard2.0\LogicLayer.csprojAssemblyReference.cache
+C:\Users\leszc\OBDScanner\OBDScanner\LogicLayer\obj\Debug\netstandard2.0\LogicLayer.AssemblyInfoInputs.cache
+C:\Users\leszc\OBDScanner\OBDScanner\LogicLayer\obj\Debug\netstandard2.0\LogicLayer.AssemblyInfo.cs
