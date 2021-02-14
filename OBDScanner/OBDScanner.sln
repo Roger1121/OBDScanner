@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicLayer", "LogicLayer\LogicLayer.csproj", "{EAC9BCAD-B663-49D4-BA78-DA12EB34E2A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Interface.csproj", "{3E1AD25F-6A77-40CC-B19B-E448893D64A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{CCA11AA9-BA13-451D-94D8-53EF529267AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAC9BCAD-B663-49D4-BA78-DA12EB34E2A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC9BCAD-B663-49D4-BA78-DA12EB34E2A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC9BCAD-B663-49D4-BA78-DA12EB34E2A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC9BCAD-B663-49D4-BA78-DA12EB34E2A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E1AD25F-6A77-40CC-B19B-E448893D64A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E1AD25F-6A77-40CC-B19B-E448893D64A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E1AD25F-6A77-40CC-B19B-E448893D64A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E1AD25F-6A77-40CC-B19B-E448893D64A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCA11AA9-BA13-451D-94D8-53EF529267AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA11AA9-BA13-451D-94D8-53EF529267AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA11AA9-BA13-451D-94D8-53EF529267AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA11AA9-BA13-451D-94D8-53EF529267AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94232082-B9A2-4862-A63D-AE3AC0950285}
+	EndGlobalSection
+EndGlobal
