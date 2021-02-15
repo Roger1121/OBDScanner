@@ -39,3 +39,5 @@ C:\Users\leszc\OBDScanner\OBDScanner\Interface\bin\Debug\netcoreapp3.1\runtimes\
 C:\Users\leszc\OBDScanner\OBDScanner\Interface\bin\Debug\netcoreapp3.1\LogicLayer.dll
 C:\Users\leszc\OBDScanner\OBDScanner\Interface\bin\Debug\netcoreapp3.1\LogicLayer.pdb
 C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\Interface.csproj.CopyComplete
+C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\ActionMenu.g.cs
+C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\ActionMenu.baml

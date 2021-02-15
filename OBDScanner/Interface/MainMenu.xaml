@@ -20,7 +20,7 @@
                     <RotateTransform Angle="6.54"/>
                     <TranslateTransform X="0.271" Y="-2.369"/>
                 </TransformGroup>
-            </Button.RenderTransform> Połącz
+            </Button.RenderTransform> Start
         </Button>
     </Grid>
 </Page>

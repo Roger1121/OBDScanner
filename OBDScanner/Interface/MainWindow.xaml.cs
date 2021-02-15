@@ -11,5 +11,10 @@ namespace Interface
         {
             InitializeComponent();
         }
+
+        private void Quit(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
     }
 }

@@ -41,7 +41,7 @@
             <ComboBoxItem Content="COM9"/>
             <ComboBoxItem Content="COM10"/>
         </ComboBox>
-        <TextBox Name="tbSettingText" Grid.Row="2" Grid.Column="2" Width="244" Height="34" FontSize="20">
+        <TextBox Name="baud" Grid.Row="2" Grid.Column="2" Width="244" Height="34" FontSize="20">
             38400
         </TextBox>
     </Grid>

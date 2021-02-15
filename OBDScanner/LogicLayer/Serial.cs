@@ -4,6 +4,13 @@ namespace LogicLayer
 {
     public class Serial
     {
+        public Serial(string name = "COM8", int baud = 38400,
+                      Parity parity = Parity.None, int dataBits = 8,
+                      StopBits stopBits = StopBits.One)
+        {
+            InitSerial(name, baud, parity, dataBits, stopBits);
+        }
+
         //programm will work with one OBD2 interface at once
         private SerialPort port;
         public void InitSerial(string name = "COM8", int baud = 38400,
@@ -32,6 +39,10 @@ namespace LogicLayer
         public void CloseSerial()
         {
             port.Close();
+        }
+        public override string ToString()
+        {
+            return "Połączono z portem: " + port.PortName + ". Baud rate: " + port.BaudRate.ToString();
         }
     }
 }

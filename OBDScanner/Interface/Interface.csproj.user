@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="ActionMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ConnectionSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -15,6 +18,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="ActionMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ConnectionSettings.xaml">
       <SubType>Designer</SubType>
     </Page>
