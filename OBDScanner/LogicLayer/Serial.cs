@@ -1,14 +1,23 @@
-﻿using System.IO.Ports;
+﻿using System.IO;
+using System.IO.Ports;
 
 namespace LogicLayer
 {
     public class Serial
     {
-        public Serial(string name = "COM8", int baud = 38400,
+        public Serial(string name, int baud,
                       Parity parity = Parity.None, int dataBits = 8,
                       StopBits stopBits = StopBits.One)
         {
-            InitSerial(name, baud, parity, dataBits, stopBits);
+            try
+            {
+                InitSerial(name, baud, parity, dataBits, stopBits);
+            }
+            catch (FileNotFoundException ex)
+            {
+
+                throw ex;
+            }
         }
 
         //programm will work with one OBD2 interface at once
@@ -17,10 +26,18 @@ namespace LogicLayer
                                Parity parity = Parity.None, int dataBits = 8,
                                StopBits stopBits = StopBits.One)
         {
-            port = new SerialPort(name, baud, parity, dataBits, stopBits);
-            port.ReadTimeout = 1000;
-            port.WriteTimeout = 1000;
-            port.Open();
+            try
+            {
+                port = new SerialPort(name, baud, parity, dataBits, stopBits);
+                port.ReadTimeout = 1000;
+                port.WriteTimeout = 1000;
+                port.Open();
+            }
+            catch (FileNotFoundException ex)
+            {
+
+                throw ex;
+            }
         }
         public string ParseSerialResponse(string response)
         {

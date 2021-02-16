@@ -1,5 +1,6 @@
 ﻿using LogicLayer;
 using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -24,11 +25,22 @@ namespace Interface
             {
                 MessageBox.Show("Podany Baud Rate nie jest liczbą");
             }
+            else if(portName!=null)
+            {
+                try
+                {
+                    var serial = new Serial(portName, baudRate);
+                    var actionMenu = new ActionMenu(serial);
+                    NavigationService.Navigate(actionMenu);
+                }
+                catch (FileNotFoundException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
             else
             {
-                var serial = new Serial(portName, baudRate);
-                var actionMenu = new ActionMenu(serial);
-                NavigationService.Navigate(actionMenu);
+                MessageBox.Show("Nie wybrano portu");
             }
         }
     }
