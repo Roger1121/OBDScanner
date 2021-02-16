@@ -16,5 +16,26 @@ namespace Interface
             MessageBox.Show(OBD.ToString());
         }
         public Serial OBD { get; set; }
+
+        private void ShowCurrentData(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void ShowFreezeFrameData(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ReadDTCs(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Quit(object sender, RoutedEventArgs e)
+        {
+            Serial.GetInstance().CloseSerial();
+            Application.Current.Shutdown();
+        }
     }
 }
