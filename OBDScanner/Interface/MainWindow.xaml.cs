@@ -15,7 +15,11 @@ namespace Interface
 
         private void Quit(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Serial.GetInstance().CloseSerial();
+            try
+            {
+                Serial.GetInstance().CloseSerial();
+            }
+            catch (NoDeviceException){}
         }
     }
 }
