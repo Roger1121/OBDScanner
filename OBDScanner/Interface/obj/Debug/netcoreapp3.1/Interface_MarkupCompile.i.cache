@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\leszc\OBDScanner\OBDScanner\Interface\App.xaml
-71586848708
+8-1717716681
 
-111793485246
+12-1027880403
 194525037051
-ActionMenu.xaml;ConnectionSettings.xaml;CurrentData.xaml;DTCs.xaml;FreezeFrame.xaml;MainMenu.xaml;MainWindow.xaml;
+ActionMenu.xaml;ConnectionSettings.xaml;Console.xaml;CurrentData.xaml;DTCs.xaml;FreezeFrame.xaml;MainMenu.xaml;MainWindow.xaml;
 
 True
 

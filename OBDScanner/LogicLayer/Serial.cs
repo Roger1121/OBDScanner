@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.IO.Ports;
 
 namespace LogicLayer
@@ -32,7 +33,7 @@ namespace LogicLayer
         }
 
         private SerialPort port;
-        public void InitSerial(string name = "COM8", int baud = 38400,
+        private void InitSerial(string name = "COM8", int baud = 38400,
                                Parity parity = Parity.None, int dataBits = 8,
                                StopBits stopBits = StopBits.One)
         {
@@ -52,16 +53,13 @@ namespace LogicLayer
                 throw new NoDeviceException("Nie znaleziono urządzenia: ", port);
             }
         }
-        public string ParseSerialResponse(string response)
-        {
-            return response;
-        }
-        public string ReadSerial()
+        
+        private string ReadSerial()
         {
             string response = port.ReadLine();
-            return ParseSerialResponse(response);
+            return response;
         }
-        public void WriteSerial(string command)
+        private void WriteSerial(string command)
         {
             port.Write(command + '\r');
         }
@@ -70,6 +68,12 @@ namespace LogicLayer
         {
             port.Close();
         }
+
+        public string ExecuteCommand(string consoleInput)
+        {
+            return "xXx";
+        }
+
         public override string ToString()
         {
             return "Połączono z portem: " + port.PortName + ". Baud rate: " + port.BaudRate.ToString();

@@ -41,3 +41,11 @@ C:\Users\leszc\OBDScanner\OBDScanner\Interface\bin\Debug\netcoreapp3.1\LogicLaye
 C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\Interface.csproj.CopyComplete
 C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\ActionMenu.g.cs
 C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\ActionMenu.baml
+C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\Console.g.cs
+C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\CurrentData.g.cs
+C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\DTCs.g.cs
+C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\FreezeFrame.g.cs
+C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\Console.baml
+C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\CurrentData.baml
+C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\DTCs.baml
+C:\Users\leszc\OBDScanner\OBDScanner\Interface\obj\Debug\netcoreapp3.1\FreezeFrame.baml

@@ -31,6 +31,11 @@ namespace Interface
             var dTCs = new DTCs();
             NavigationService.Navigate(dTCs);
         }
+        private void OpenTerminal(object sender, RoutedEventArgs e)
+        {
+            var console = new Console();
+            NavigationService.Navigate(console);
+        }
 
         private void Quit(object sender, RoutedEventArgs e)
         {
