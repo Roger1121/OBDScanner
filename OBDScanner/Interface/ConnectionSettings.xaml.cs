@@ -29,7 +29,7 @@ namespace Interface
             {
                 try
                 {
-                    var serial = new Serial(portName, baudRate);
+                    var serial = Serial.GetInstance(portName, baudRate);
                     var actionMenu = new ActionMenu(serial);
                     NavigationService.Navigate(actionMenu);
                 }
