@@ -7,7 +7,7 @@ namespace LogicLayer
     {
         private static Serial _instance;
 
-        public static Serial GetInstance(string name, int baud,
+        public static Serial GetInstance(string name="COM8", int baud=38400,
                       Parity parity = Parity.None, int dataBits = 8,
                       StopBits stopBits = StopBits.One)
         {
@@ -18,9 +18,8 @@ namespace LogicLayer
             return _instance;
         }
 
-        private Serial(string name, int baud,
-                      Parity parity = Parity.None, int dataBits = 8,
-                      StopBits stopBits = StopBits.One)
+        private Serial(string name, int baud, Parity parity,
+                       int dataBits, StopBits stopBits)
         {
             try
             {

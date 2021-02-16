@@ -1,4 +1,5 @@
 ﻿using System.Windows.Navigation;
+using LogicLayer;
 
 namespace Interface
 {
@@ -14,7 +15,7 @@ namespace Interface
 
         private void Quit(object sender, System.ComponentModel.CancelEventArgs e)
         {
-
+            Serial.GetInstance().CloseSerial();
         }
     }
 }
