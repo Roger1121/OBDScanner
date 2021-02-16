@@ -33,9 +33,9 @@ namespace Interface
                     var actionMenu = new ActionMenu(serial);
                     NavigationService.Navigate(actionMenu);
                 }
-                catch (FileNotFoundException ex)
+                catch (NoDeviceException ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.FullMessage);
                 }
             }
             else

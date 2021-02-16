@@ -13,9 +13,8 @@ namespace LogicLayer
             {
                 InitSerial(name, baud, parity, dataBits, stopBits);
             }
-            catch (FileNotFoundException ex)
+            catch (NoDeviceException ex)
             {
-
                 throw ex;
             }
         }
@@ -36,7 +35,8 @@ namespace LogicLayer
             catch (FileNotFoundException ex)
             {
 
-                throw ex;
+                string port = ex.Message.Substring(21, 4);
+                throw new NoDeviceException("Nie znaleziono urządzenia: ", port);
             }
         }
         public string ParseSerialResponse(string response)
