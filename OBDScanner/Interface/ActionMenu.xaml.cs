@@ -9,13 +9,10 @@ namespace Interface
     /// </summary>
     public partial class ActionMenu : Page
     {
-        public ActionMenu(Serial serial)
+        public ActionMenu()
         {
             InitializeComponent();
-            OBD = serial;
-            MessageBox.Show(OBD.ToString());
         }
-        public Serial OBD { get; set; }
 
         private void ShowCurrentData(object sender, RoutedEventArgs e)
         {
