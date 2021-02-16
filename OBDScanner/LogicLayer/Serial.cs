@@ -41,8 +41,8 @@ namespace LogicLayer
             {
                 port = new SerialPort(name, baud, parity, dataBits, stopBits)
                 {
-                    ReadTimeout = 1000,
-                    WriteTimeout = 1000
+                    ReadTimeout = 100000,
+                    WriteTimeout = 100000
                 };
                 port.Open();
             }
@@ -56,12 +56,12 @@ namespace LogicLayer
         
         private string ReadSerial()
         {
-            string response = port.ReadLine();
+            string response = port.ReadExisting();
             return response;
         }
         private void WriteSerial(string command)
         {
-            port.Write(command + '\r');
+            port.Write(command);
         }
 
         public void CloseSerial()
@@ -71,7 +71,8 @@ namespace LogicLayer
 
         public string ExecuteCommand(string consoleInput)
         {
-            return "xXx";
+            WriteSerial(consoleInput);
+            return ReadSerial();
         }
 
         public override string ToString()
