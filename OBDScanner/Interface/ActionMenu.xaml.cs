@@ -16,17 +16,20 @@ namespace Interface
 
         private void ShowCurrentData(object sender, RoutedEventArgs e)
         {
-            
+            var currentData = new CurrentData();
+            NavigationService.Navigate(currentData);
         }
 
         private void ShowFreezeFrameData(object sender, RoutedEventArgs e)
         {
-
+            var freezeFrame = new FreezeFrame();
+            NavigationService.Navigate(freezeFrame);
         }
 
         private void ReadDTCs(object sender, RoutedEventArgs e)
         {
-
+            var dTCs = new DTCs();
+            NavigationService.Navigate(dTCs);
         }
 
         private void Quit(object sender, RoutedEventArgs e)

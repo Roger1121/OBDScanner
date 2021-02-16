@@ -29,8 +29,8 @@ namespace Interface
             {
                 try
                 {
-                    var serial = Serial.GetInstance(portName, baudRate);
-                    var actionMenu = new ActionMenu(serial);
+                    Serial.GetInstance(portName, baudRate);
+                    var actionMenu = new ActionMenu();
                     NavigationService.Navigate(actionMenu);
                 }
                 catch (NoDeviceException ex)
