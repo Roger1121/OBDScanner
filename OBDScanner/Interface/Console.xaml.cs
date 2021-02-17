@@ -1,6 +1,8 @@
 ﻿using LogicLayer;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -13,7 +15,7 @@ namespace Interface
     public partial class Console : Page
     {
         ConsoleContent dc = new ConsoleContent();
-
+        
         public Console()
         {
             InitializeComponent();
@@ -76,7 +78,7 @@ namespace Interface
 
         public void RunCommand()
         {
-            ConsoleOutput.Add(ConsoleInput);
+            //ConsoleOutput.Add(ConsoleInput);
             ConsoleOutput.Add(Serial.GetInstance().ExecuteCommand(ConsoleInput));
             ConsoleInput = string.Empty;
         }
@@ -84,8 +86,7 @@ namespace Interface
         public event PropertyChangedEventHandler PropertyChanged;
         void OnPropertyChanged(string propertyName)
         {
-            if (null != PropertyChanged)
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

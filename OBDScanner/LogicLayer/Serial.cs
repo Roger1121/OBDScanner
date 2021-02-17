@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.IO.Ports;
 
 namespace LogicLayer
@@ -53,15 +52,12 @@ namespace LogicLayer
                 throw new NoDeviceException("Nie znaleziono urządzenia: ", port);
             }
         }
-        
-        private string ReadSerial()
-        {
-            string response = port.ReadExisting();
-            return response;
-        }
+
+        public string ReadSerial => port.ReadExisting();
         private void WriteSerial(string command)
         {
-            port.Write(command);
+            
+            port.Write(command+'\r');
         }
 
         public void CloseSerial()
@@ -71,8 +67,9 @@ namespace LogicLayer
 
         public string ExecuteCommand(string consoleInput)
         {
-            WriteSerial(consoleInput);
-            return ReadSerial();
+            if(!(consoleInput is null || consoleInput==""))
+                WriteSerial(consoleInput);
+            return ReadSerial;
         }
 
         public override string ToString()
