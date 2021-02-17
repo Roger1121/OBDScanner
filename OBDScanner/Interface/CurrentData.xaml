@@ -12,5 +12,6 @@
         <Grid.Background>
             <ImageBrush ImageSource="/files/background.png" />
         </Grid.Background>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="200" Height="50" FontSize="23" Click="Quit" Margin="40,0,0,40">Wróć</Button>
     </Grid>
 </Page>

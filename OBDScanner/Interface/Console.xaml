@@ -17,7 +17,7 @@
             <RowDefinition Height="8*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Button Width="200" Height="40" FontSize="23" Grid.Row="2" HorizontalAlignment="Right" Margin="0,0,40,0" Click="Return">Wyjdź</Button>
+        <Button Width="200" Height="40" FontSize="23" Grid.Row="2" HorizontalAlignment="Right" Margin="0,0,40,0" Click="Return">Wróć</Button>
         <ScrollViewer Grid.Row="1" Margin="20,0,20,0" Name="Scroller" Background="Black">
             <StackPanel>
                 <ItemsControl ItemsSource="{Binding ConsoleOutput, Mode=OneWay}">

@@ -20,6 +20,12 @@ namespace Interface
         private void ClearDTCs(object sender, RoutedEventArgs e)
         {
             Serial.GetInstance().ClearTroubleCodes();
+            text.Text = ReadDTCs();
+        }
+        private void Quit(object sender, RoutedEventArgs e)
+        {
+            var actionMenu = new ActionMenu();
+            NavigationService.Navigate(actionMenu);
         }
     }
 }

@@ -22,5 +22,10 @@ namespace Interface
         {
             InitializeComponent();
         }
+        private void Quit(object sender, RoutedEventArgs e)
+        {
+            var actionMenu = new ActionMenu();
+            NavigationService.Navigate(actionMenu);
+        }
     }
 }
