@@ -53,7 +53,13 @@ namespace LogicLayer
             }
         }
 
-        public string ReadSerial => port.ReadExisting();
+        public string ReadSerial()
+        {
+            string response = port.ReadExisting();
+            while(!(response is null || response ==""))
+                response += port.ReadExisting();
+            return response;
+        }
         private void WriteSerial(string command)
         {
             
@@ -69,7 +75,7 @@ namespace LogicLayer
         {
             if(!(consoleInput is null || consoleInput==""))
                 WriteSerial(consoleInput);
-            return ReadSerial;
+            return ReadSerial();
         }
 
         public override string ToString()
