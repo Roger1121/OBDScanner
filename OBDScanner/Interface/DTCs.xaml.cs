@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using LogicLayer;
 
 namespace Interface
 {
@@ -21,11 +12,14 @@ namespace Interface
         public DTCs()
         {
             InitializeComponent();
+            text.Text = ReadDTCs();
         }
+
+        private string ReadDTCs() => Serial.GetInstance().ReadTroubleCodes();
 
         private void ClearDTCs(object sender, RoutedEventArgs e)
         {
-
+            Serial.GetInstance().ClearTroubleCodes();
         }
     }
 }
